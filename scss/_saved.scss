@@ -1,0 +1,21 @@
+// Styling the background image for this page.
+section.saved-background {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100vw;
+    background-repeat: none;
+    background-image: url("../images/saved-background.png");
+    background-attachment: fixed;
+    opacity: 0.2;
+    z-index: -1;
+}
+
+// Styling for the <p> elements in the <div class="saved-items"> container.
+div.saved-items>p {
+    padding: 15px;
+    margin: 15px;
+    font-size: 1.5rem;
+    color: #000;
+}

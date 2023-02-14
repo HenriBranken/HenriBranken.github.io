@@ -1,0 +1,132 @@
+@import "./config";
+@import "./index";
+@import "./anime";
+@import "./nihongo";
+@import "./about-me";
+@import "./saved";
+
+/*
+Import the "Dr Sugiyama" Google Font
+The usage of the font:
+    font-family: 'Dr Sugiyama', cursive;
+*/
+@import url('https://fonts.googleapis.com/css2?family=Dr+Sugiyama&display=swap');
+/*
+Import the "Noto Serif Japanese" Google Font.
+The usage of the font:
+    font-family: 'Noto Serif JP', serif;
+*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@600&display=swap');
+/*
+Import the "Cinzel Decorative" Google Font.
+The usage of the font:
+    font-family: 'Cinzel Decorative', cursive;
+*/
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap');
+/*
+Import the "Arimo" Google Font.
+The usage of the font:
+    font-family: 'Arimo', sans-serif;
+*/
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;700&display=swap');
+/*
+Import the "Pirata One" Google Font.
+The usage of the font:
+    font-family: "Pirata One", cursive;
+*/
+@import url('https://fonts.googleapis.com/css2?family=Pirata+One&display=swap');
+
+// The styling for the top navigation bar.
+header.navigation {
+    border: solid 2px #555;
+    width: 100%;
+
+    ul.nav-items {
+        list-style: none;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        background-image: linear-gradient(to right,
+                rgba(65, 71, 89, 1),
+                rgba(213, 165, 154, 1));
+
+        li.nav-item {
+            display: inline-block;
+            padding: 1.2rem 1.5rem;
+            font-size: 1.7rem;
+        }
+
+        li.nav-item>a:link,
+        li.nav-item>a:visited {
+            text-decoration: none;
+            color: white;
+            font-family: 'Cinzel Decorative', cursive;
+        }
+
+        li.nav-item>a:hover {
+            text-decoration: underline;
+            color: rgba(235, 206, 152, 0.92);
+        }
+
+        li.active {
+            text-decoration: underline;
+        }
+    }
+}
+
+// Apply a different font family whenever I type Japanese characters.
+span.jp-insert {
+    font-family: "Noto Serif JP", serif;
+}
+
+// Styling for the "Like?" buttons.
+form#like-form {
+    display: inline-block;
+
+    button {
+        display: inline-block;
+        background-color: rgba(63, 230, 41, 0.5);
+        text-align: center;
+        margin: -15px 5px 5px 5px;
+        padding: 7px;
+        border-radius: 10px;
+        font-weight: bold;
+        font-size: 16px;
+        border: 1px solid #999;
+        box-shadow: 2px 2px 5px #999;
+        cursor: pointer;
+    }
+}
+
+// The "Save for Later" buttons.
+button:has(i.sfl) {
+    display: inline-block;
+    background-color: rgba(63, 230, 41, 0.5);
+    text-align: center;
+    font-family: "Arimo", sans-serif;
+    margin: -15px 5px 5px 5px;
+    padding: 7px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    border: 1px solid #999;
+    box-shadow: 2px 2px 5px #999;
+    outline: none;
+    &>i.sfl {
+        cursor: pointer;
+    }
+}
+
+// The "Save for Later" buttons which have been already clicked, and turned into a paper-plane icon.
+button:has(i.sfl.fa.fa-paper-plane-o.fa-lg) {
+    display: inline-block;
+    background-color: orange;
+    text-align: center;
+    margin: -15px 5px 5px 5px;
+    padding: 7px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    border: 1px solid #999;
+    box-shadow: 2px 2px 5px #999;
+}

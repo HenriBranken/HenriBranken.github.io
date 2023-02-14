@@ -1,0 +1,36 @@
+// The main container in the index page.
+div.index-page {
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    top: 0;
+    bottom: 0;
+}
+
+// <div.banner> relates to the background image of the index.html page.
+section.index-content {
+    position: relative;
+    height: 100%;
+
+    div.banner {
+        height: 100vh;
+        width: 100%;
+        background-position: top left;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url("../images/japanese-style.webp");
+        background-attachment: fixed;
+        overflow: hidden;
+    }
+    
+    div.banner-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: 'Dr Sugiyama', cursive;
+        font-size: 8.5rem;
+        text-shadow: 1rem 1rem 1rem rgba(55,61,82,0.8);
+        color: rgba(55,61,82,1);
+    }
+}

@@ -1,0 +1,336 @@
+// Styling the background image for this page.
+section.anime-background {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100vw;
+    background-repeat: none;
+    background-image: url("../images/manga.webp");
+    background-attachment: fixed;
+    opacity: 0.2;
+    z-index: -1;
+}
+
+// Styling the layout of the page.
+div.rest-of-page {
+    margin-left: 10rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    margin-right: 10rem;
+
+    section.content-text {
+        width: 1000px;
+        margin-right: auto;
+        text-align: justify;
+        @include sizing;
+
+        &>p {
+            padding: 15px;
+        }
+    }
+}
+
+
+$backgroundColor: rgba(222, 158, 102, 0.35);
+$backgroundColor2: rgba(88, 195, 245, 0.35);
+$nullColor: rgba(0, 0, 0, 0);
+
+// Styling each "reason" for consistency.
+article.reason-n {
+    background-color: $nullColor;
+    position: relative;
+    display: block;
+    padding: 15px;
+    margin: 10px 0;
+    transition: background-color 1000ms linear;
+    border-radius: 7px;
+
+    &.scrolled {
+        background-color: $backgroundColor;
+        border: 0.5px solid #666;
+    }
+
+    &:nth-child(even).scrolled {
+        background-color: $backgroundColor2;
+        border: 0.5px solid #666;
+    }
+
+    div.img-card {
+        position: relative;
+        margin-bottom: 20px;
+
+        &>img {
+            display: block;
+            padding: 25px 0px 15px;
+            max-width: 950px;
+            max-height: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            filter: drop-shadow(8px 8px 10px #777);
+        }
+    }
+}
+
+// Styling the Horizontal Rule.
+hr {
+    height: 3px;
+    background-color: #555;
+}
+
+// Styling the image caption beneath each picture.
+span.img-caption {
+    display: table;
+    padding-top: 10px;
+    margin: 0 auto;
+}
+
+// The quote below the image of Guts: "Heed my words, Struggler......"
+div.quote {
+    position: relative;
+    margin-left: 20px;
+    border-left: 8px solid black;
+    transition: all 0.5s ease 0.2s;
+
+    blockquote {
+        width: 90%;
+        font-family: "Pirata One", cursive;
+        font-size: 2rem;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 1.6;
+        text-align: justify;
+
+        &::before {
+            font-family: "Pirata One", cursive;
+            content: "\201C";
+            color: black;
+            font-size: 5rem;
+            position: absolute;
+            left: 20px;
+            top: -20px;
+        }
+
+        &::after {
+            content: "";
+        }
+
+        span {
+            display: block;
+            text-align: right;
+            font-family: "Pirata One", cursive;
+            font-size: 2rem;
+            margin: 1rem 0;
+        }
+    }
+
+    &:hover {
+        background-color: red;
+        box-shadow: 0 0 15px red;
+    }
+}
+
+// Styling the ugly html table.
+div.table {
+    border-bottom: 2px solid #555;
+
+    &>table {
+        width: 90%;
+        margin-right: auto;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+}
+
+thead {
+    background-color: rgba(234, 140, 106, 0.75);
+    font-size: 1.5rem;
+}
+
+td,
+th {
+    font-size: 1.1rem;
+    text-align: center;
+    padding: 0.6rem;
+    color: rgb(0, 0, 0);
+}
+
+table,
+td,
+th {
+    border-collapse: collapse;
+    border: 0.5px solid #ddd;
+}
+
+tbody>tr:nth-child(odd) {
+    background-color: rgba(77, 123, 133, 1);
+
+    td {
+        color: #fff;
+
+        a {
+            color: white;
+            text-underline-offset: 3px;
+        }
+    }
+}
+
+tbody>tr:nth-child(even) {
+    background-color: rgba(55, 61, 82, 1);
+
+    td {
+        color: #fff;
+
+        a {
+            color: white;
+            text-underline-offset: 3px;
+        }
+    }
+}
+
+// Styling for the 'Leave-a-Reply' section.
+div.anime-reply {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: rgba(235, 206, 152, 0.7);
+    border: 2px solid rgba(55, 61, 82, 1);
+    border-radius: 10px;
+    padding: 2rem;
+    width: 1000px;
+
+    h1.anime-reply {
+        padding: 0.7rem 0;
+        font-size: 3.6rem;
+        font-weight: 900;
+        font-family: 'Cinzel Decorative', cursive;
+        text-align: left;
+        color: rgba(55, 61, 82, 1);
+        margin-bottom: 15px;
+        width: 100%;
+        outline: none;
+        letter-spacing: 0.1rem;
+        word-spacing: 0.3rem;
+    }
+
+    .anime-reply-input {
+        color: rgba(55, 61, 82, 1);
+        font-size: 1.3rem;
+        font-weight: 300;
+        line-height: 1.8rem;
+        border: 1px solid rgba(55, 61, 82, 1);
+        padding: 15px;
+        margin-bottom: 15px;
+        // background-color: transparent;
+
+        &::placeholder {
+            color: rgba(55, 61, 82, 0.5);
+        }
+
+        &:focus {
+            box-shadow: 0 0 8px rgba(55, 61, 82, 1);
+        }
+    }
+
+    textarea {
+        width: 932px;
+        height: 100px;
+        line-height: 150%;
+        resize: vertical;
+        outline: none;
+        background-color: rgba(235, 206, 152, 1);
+    }
+
+    [type="submit"] {
+        font-family: 'Cinzel Decorative', cursive;
+        font-weight: 600;
+        background: rgba(77, 123, 133, 1);
+        color: rgba(235, 206, 152, 1);
+        border: 1px solid rgba(235, 206, 152, 1);
+        font-size: 1.5rem;
+        padding: 12px;
+        cursor: pointer;
+        transition: all 500ms linear;
+    }
+
+    [type="submit"]:hover {
+        background: rgba(55, 61, 82, 1);
+        box-shadow: 0 0 8px rgba(77, 123, 133, 1);
+    }
+
+    div.anime-reply-ps {
+
+        & > p {
+            width: 932px;
+            padding: 15px;
+            margin: 15px 0;
+            line-height: 150%;
+            outline: none;
+            border: 1px solid #fff;
+            border-radius: 5px;
+            background-color: rgba(55, 61, 82, 1);
+            color: white;
+            & > span {
+                float: right;
+                color: rgba(235, 206, 152, 1);
+            }
+        }
+    }
+}
+
+// Styling the button which takes us back to the top.
+body.anime div.back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+
+    &>a {
+        text-decoration: none;
+        display: block;
+        min-width: 30px;
+        min-height: 30px;
+        font-size: 4rem;
+        color: #555;
+        text-align: right;
+    }
+}
+
+// Something extra . . .
+// A leaf button.
+div.teaser-leaf {
+    display: block;
+    position: fixed;
+    bottom: 80px;
+    right: 10px;
+    font-size: 4rem;
+    color: rgb(255, 105, 180, 1);
+    cursor: pointer;
+}
+
+// A stop button.
+div.teaser-stop {
+    display: block;
+    position: fixed;
+    bottom: 80px;
+    right: 10px;
+    font-size: 4rem;
+    color: #555;
+    cursor: pointer;
+
+    &>i {
+        display: none;
+    }
+}
+
+// A hidden image that gets triggered by the two buttons specified above.
+div.teaser-img {
+    display: none;
+    position: fixed;
+    bottom: 10px;
+    right: 120px;
+
+    &>img {
+        width: 570px;
+        border-radius: 7px;
+    }
+}

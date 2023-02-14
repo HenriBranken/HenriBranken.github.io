@@ -1,0 +1,967 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Dr+Sugiyama&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pirata+One&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Arimo", sans-serif;
+}
+
+div.myAccordion ul {
+  margin-left: 1em;
+}
+
+div.index-page {
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  top: 0;
+  bottom: 0;
+}
+
+section.index-content {
+  position: relative;
+  height: 100%;
+}
+section.index-content div.banner {
+  height: 100vh;
+  width: 100%;
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../images/japanese-style.webp");
+  background-attachment: fixed;
+  overflow: hidden;
+}
+section.index-content div.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Dr Sugiyama", cursive;
+  font-size: 8.5rem;
+  text-shadow: 1rem 1rem 1rem rgba(55, 61, 82, 0.8);
+  color: rgb(55, 61, 82);
+}
+
+section.anime-background {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 100vw;
+  background-repeat: none;
+  background-image: url("../images/manga.webp");
+  background-attachment: fixed;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+div.rest-of-page {
+  margin-left: 10rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  margin-right: 10rem;
+}
+div.rest-of-page section.content-text {
+  width: 1000px;
+  margin-right: auto;
+  text-align: justify;
+}
+div.rest-of-page section.content-text h1 {
+  padding: 0.7rem 15px;
+  font-size: 3.6rem;
+  font-weight: 900;
+}
+div.rest-of-page section.content-text h2 {
+  padding: 0.7rem 15px;
+  font-size: 3.3rem;
+  font-family: "Arimo", sans-serif;
+  font-weight: 700;
+}
+div.rest-of-page section.content-text h3 {
+  padding: 0.7rem 15px;
+  font-size: 2.5rem;
+  font-family: "Arimo", sans-serif;
+  font-weight: 700;
+}
+div.rest-of-page section.content-text p {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+div.rest-of-page section.content-text label {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin-bottom: 1.5rem;
+}
+div.rest-of-page section.content-text > p {
+  padding: 15px;
+}
+
+article.reason-n {
+  background-color: rgba(0, 0, 0, 0);
+  position: relative;
+  display: block;
+  padding: 15px;
+  margin: 10px 0;
+  transition: background-color 1000ms linear;
+  border-radius: 7px;
+}
+article.reason-n.scrolled {
+  background-color: rgba(222, 158, 102, 0.35);
+  border: 0.5px solid #666;
+}
+article.reason-n:nth-child(even).scrolled {
+  background-color: rgba(88, 195, 245, 0.35);
+  border: 0.5px solid #666;
+}
+article.reason-n div.img-card {
+  position: relative;
+  margin-bottom: 20px;
+}
+article.reason-n div.img-card > img {
+  display: block;
+  padding: 25px 0px 15px;
+  max-width: 950px;
+  max-height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  filter: drop-shadow(8px 8px 10px #777);
+}
+
+hr {
+  height: 3px;
+  background-color: #555;
+}
+
+span.img-caption {
+  display: table;
+  padding-top: 10px;
+  margin: 0 auto;
+}
+
+div.quote {
+  position: relative;
+  margin-left: 20px;
+  border-left: 8px solid black;
+  transition: all 0.5s ease 0.2s;
+}
+div.quote blockquote {
+  width: 90%;
+  font-family: "Pirata One", cursive;
+  font-size: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+  text-align: justify;
+}
+div.quote blockquote::before {
+  font-family: "Pirata One", cursive;
+  content: "“";
+  color: black;
+  font-size: 5rem;
+  position: absolute;
+  left: 20px;
+  top: -20px;
+}
+div.quote blockquote::after {
+  content: "";
+}
+div.quote blockquote span {
+  display: block;
+  text-align: right;
+  font-family: "Pirata One", cursive;
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+div.quote:hover {
+  background-color: red;
+  box-shadow: 0 0 15px red;
+}
+
+div.table {
+  border-bottom: 2px solid #555;
+}
+div.table > table {
+  width: 90%;
+  margin-right: auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+thead {
+  background-color: rgba(234, 140, 106, 0.75);
+  font-size: 1.5rem;
+}
+
+td,
+th {
+  font-size: 1.1rem;
+  text-align: center;
+  padding: 0.6rem;
+  color: rgb(0, 0, 0);
+}
+
+table,
+td,
+th {
+  border-collapse: collapse;
+  border: 0.5px solid #ddd;
+}
+
+tbody > tr:nth-child(odd) {
+  background-color: rgb(77, 123, 133);
+}
+tbody > tr:nth-child(odd) td {
+  color: #fff;
+}
+tbody > tr:nth-child(odd) td a {
+  color: white;
+  text-underline-offset: 3px;
+}
+
+tbody > tr:nth-child(even) {
+  background-color: rgb(55, 61, 82);
+}
+tbody > tr:nth-child(even) td {
+  color: #fff;
+}
+tbody > tr:nth-child(even) td a {
+  color: white;
+  text-underline-offset: 3px;
+}
+
+div.anime-reply {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-color: rgba(235, 206, 152, 0.7);
+  border: 2px solid rgb(55, 61, 82);
+  border-radius: 10px;
+  padding: 2rem;
+  width: 1000px;
+}
+div.anime-reply h1.anime-reply {
+  padding: 0.7rem 0;
+  font-size: 3.6rem;
+  font-weight: 900;
+  font-family: "Cinzel Decorative", cursive;
+  text-align: left;
+  color: rgb(55, 61, 82);
+  margin-bottom: 15px;
+  width: 100%;
+  outline: none;
+  letter-spacing: 0.1rem;
+  word-spacing: 0.3rem;
+}
+div.anime-reply .anime-reply-input {
+  color: rgb(55, 61, 82);
+  font-size: 1.3rem;
+  font-weight: 300;
+  line-height: 1.8rem;
+  border: 1px solid rgb(55, 61, 82);
+  padding: 15px;
+  margin-bottom: 15px;
+}
+div.anime-reply .anime-reply-input::-moz-placeholder {
+  color: rgba(55, 61, 82, 0.5);
+}
+div.anime-reply .anime-reply-input::placeholder {
+  color: rgba(55, 61, 82, 0.5);
+}
+div.anime-reply .anime-reply-input:focus {
+  box-shadow: 0 0 8px rgb(55, 61, 82);
+}
+div.anime-reply textarea {
+  width: 932px;
+  height: 100px;
+  line-height: 150%;
+  resize: vertical;
+  outline: none;
+  background-color: rgb(235, 206, 152);
+}
+div.anime-reply [type=submit] {
+  font-family: "Cinzel Decorative", cursive;
+  font-weight: 600;
+  background: rgb(77, 123, 133);
+  color: rgb(235, 206, 152);
+  border: 1px solid rgb(235, 206, 152);
+  font-size: 1.5rem;
+  padding: 12px;
+  cursor: pointer;
+  transition: all 500ms linear;
+}
+div.anime-reply [type=submit]:hover {
+  background: rgb(55, 61, 82);
+  box-shadow: 0 0 8px rgb(77, 123, 133);
+}
+div.anime-reply div.anime-reply-ps > p {
+  width: 932px;
+  padding: 15px;
+  margin: 15px 0;
+  line-height: 150%;
+  outline: none;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  background-color: rgb(55, 61, 82);
+  color: white;
+}
+div.anime-reply div.anime-reply-ps > p > span {
+  float: right;
+  color: rgb(235, 206, 152);
+}
+
+body.anime div.back-to-top {
+  display: none;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+body.anime div.back-to-top > a {
+  text-decoration: none;
+  display: block;
+  min-width: 30px;
+  min-height: 30px;
+  font-size: 4rem;
+  color: #555;
+  text-align: right;
+}
+
+div.teaser-leaf {
+  display: block;
+  position: fixed;
+  bottom: 80px;
+  right: 10px;
+  font-size: 4rem;
+  color: rgb(255, 105, 180);
+  cursor: pointer;
+}
+
+div.teaser-stop {
+  display: block;
+  position: fixed;
+  bottom: 80px;
+  right: 10px;
+  font-size: 4rem;
+  color: #555;
+  cursor: pointer;
+}
+div.teaser-stop > i {
+  display: none;
+}
+
+div.teaser-img {
+  display: none;
+  position: fixed;
+  bottom: 10px;
+  right: 120px;
+}
+div.teaser-img > img {
+  width: 570px;
+  border-radius: 7px;
+}
+
+section.nihongo-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: repeat;
+  background-image: url("../images/old-characters.jpg");
+  opacity: 0.05;
+  z-index: -1;
+}
+
+div.nh-rest-of-page {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px;
+}
+div.nh-rest-of-page section.nh-content-text {
+  width: 100%;
+}
+div.nh-rest-of-page section.nh-content-text h1 {
+  padding: 0.7rem 15px;
+  font-size: 3.6rem;
+  font-weight: 900;
+}
+div.nh-rest-of-page section.nh-content-text h2 {
+  padding: 0.7rem 15px;
+  font-size: 3.3rem;
+  font-family: "Arimo", sans-serif;
+  font-weight: 700;
+}
+div.nh-rest-of-page section.nh-content-text h3 {
+  padding: 0.7rem 15px;
+  font-size: 2.5rem;
+  font-family: "Arimo", sans-serif;
+  font-weight: 700;
+}
+div.nh-rest-of-page section.nh-content-text p {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+div.nh-rest-of-page section.nh-content-text label {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin-bottom: 1.5rem;
+}
+div.nh-rest-of-page section.nh-content-text > div.introduction > p, div.nh-rest-of-page section.nh-content-text > div.example-compounds > p, div.nh-rest-of-page section.nh-content-text > div.offer > p {
+  width: 100%;
+  padding: 20px;
+}
+
+label.form-control {
+  padding-left: 20px;
+}
+
+div.form-control {
+  padding-bottom: 20px;
+}
+
+div.compound-card {
+  width: 1071px;
+  background-color: #d28e53;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 15px;
+  display: block;
+  box-shadow: 10px 10px 10px #666;
+}
+div.compound-card > div.nh-big {
+  font-family: "Noto Serif JP", serif;
+  font-size: 6rem;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #fff;
+}
+div.compound-card > span.nh-explanation {
+  display: block;
+  font-size: 1.8rem;
+  color: white;
+  text-align: center;
+  margin: 20px 7px 10px 7px;
+}
+
+div.compound-cards {
+  width: 1111px;
+  height: 275px;
+  overflow: hidden;
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+}
+div.compound-cards > ul.compound-cards {
+  display: block;
+  width: 8568px;
+  height: 275px;
+  padding: 0;
+}
+div.compound-cards > ul.compound-cards > li.compound-card {
+  margin: 20px 20px;
+  float: left;
+  list-style-type: none;
+  width: 1071px;
+  height: 235px;
+}
+div.compound-cards > ul.compound-cards > li.compound-card:nth-child(even) > div.compound-card {
+  background-color: purple;
+}
+
+div.nhg-reply {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-color: rgba(128, 0, 128, 0.75);
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 10px;
+  padding: 2rem;
+}
+div.nhg-reply h1.nhg-reply {
+  padding: 0.7rem 0;
+  font-size: 3.6rem;
+  font-weight: 900;
+  font-family: "Cinzel Decorative", cursive;
+  text-align: left;
+  color: rgb(255, 255, 255);
+  margin-bottom: 15px;
+  width: 100%;
+  outline: none;
+  letter-spacing: 0.1rem;
+  word-spacing: 0.3rem;
+  transition: all 500ms linear;
+}
+div.nhg-reply h1.nhg-reply:hover {
+  text-shadow: 0 0 5px #fff;
+}
+div.nhg-reply .nhg-reply-input {
+  color: rgb(255, 255, 255);
+  font-size: 1.3rem;
+  font-weight: 300;
+  line-height: 1.8rem;
+  border: 1px solid rgb(255, 255, 255);
+  padding: 15px;
+  margin-bottom: 15px;
+}
+div.nhg-reply .nhg-reply-input::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+div.nhg-reply .nhg-reply-input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+div.nhg-reply .nhg-reply-input:focus {
+  box-shadow: 0 0 8px rgb(255, 255, 255);
+}
+div.nhg-reply form > textarea {
+  width: 100%;
+  height: 100px;
+  line-height: 150%;
+  resize: vertical;
+  outline: none;
+  background-color: rgba(128, 0, 128, 0.75);
+}
+div.nhg-reply [type=submit] {
+  font-family: "Cinzel Decorative", cursive;
+  font-weight: 600;
+  background: rgba(210, 142, 83, 0.7);
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
+  font-size: 1.5rem;
+  padding: 12px;
+  cursor: pointer;
+  transition: all 500ms linear;
+}
+div.nhg-reply [type=submit]:hover {
+  background: rgb(210, 142, 83);
+  box-shadow: 0 0 8px rgb(255, 255, 255);
+}
+div.nhg-reply div.nhg-reply-ps > p {
+  font-size: 1.2rem;
+  width: 100%;
+  padding: 15px;
+  margin: 15px 0;
+  line-height: 150%;
+  outline: none;
+  border: 1px solid #000;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: rgb(128, 0, 128);
+}
+div.nhg-reply div.nhg-reply-ps > p > span {
+  font-size: 1rem;
+  float: right;
+  color: rgba(128, 0, 128, 0.7);
+}
+
+body.nihongo div.back-to-top {
+  display: block;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+body.nihongo div.back-to-top > a {
+  text-decoration: none;
+  display: block;
+  min-width: 30px;
+  min-height: 30px;
+  font-size: 5rem;
+  color: purple;
+  text-align: right;
+}
+
+section.about-background {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 100vw;
+  background-repeat: repeat;
+  background-image: url("../images/traditional-mesh.jpg");
+  overflow: hidden;
+  background-attachment: fixed;
+  opacity: 1;
+  z-index: -1;
+}
+
+div.about-rest-of-page {
+  margin-top: 30px;
+  margin-left: 550px;
+  margin-right: 550px;
+  background-color: rgba(235, 206, 152, 0.92);
+  border: 2px solid rgb(49, 44, 45);
+  border-radius: 10px;
+  padding: 2rem;
+}
+
+/* THE ACCORDION ---------------------------------------------------------------------------- */
+div.yyyy-entry {
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid rgb(49, 44, 45);
+}
+div.yyyy-entry > div.yyyy-heading {
+  padding: 15px;
+  margin: 10px 0 0;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  cursor: pointer;
+}
+div.yyyy-entry > div.yyyy-heading.active {
+  border: 2px solid rgb(49, 44, 45);
+}
+div.yyyy-entry > div.yyyy-heading > span {
+  font-size: 1.5rem;
+  font-weight: 900;
+  line-height: 2rem;
+  margin-bottom: 1rem;
+  color: rgb(49, 44, 45);
+}
+div.yyyy-entry > div.yyyy-description:not(.active) {
+  display: none;
+}
+div.yyyy-entry > div.yyyy-description {
+  padding: 15px;
+}
+div.yyyy-entry > div.yyyy-description > p, div.yyyy-entry > div.yyyy-description > ul > li {
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+  color: rgb(49, 44, 45);
+  text-align: justify;
+}
+
+/* THE NETWORKING ICONS --------------------------------------------------------------------- */
+section.network-me {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: space-evenly;
+  align-items: center;
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgb(235, 206, 152);
+  border-left: 2px solid rgb(49, 44, 45);
+  border-top: 2px solid rgb(49, 44, 45);
+  border-bottom: 2px solid rgb(49, 44, 45);
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+section.network-me > div.network-icon {
+  padding: 20px;
+  transition: all 0.8s ease;
+}
+section.network-me > div.network-icon > a {
+  text-decoration: none;
+  color: rgb(49, 44, 45);
+  font-size: 2rem;
+}
+section.network-me > div.network-icon:hover {
+  transform: rotate(720deg);
+}
+
+/* THE VERTICAL DROPDOWN MENU ----------------------------------------------------------------------- */
+section.skillset {
+  position: fixed;
+  top: 50%;
+  transform: translate(0, -50%);
+  background-color: rgb(235, 206, 152);
+  width: 270px;
+  border-top: 2px solid rgb(49, 44, 45);
+  border-right: 2px solid rgb(49, 44, 45);
+  border-bottom: 2px solid rgb(49, 44, 45);
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+section.skillset h1.skillset {
+  border-top-right-radius: 28px;
+  font-size: 2.5rem;
+  padding: 10px;
+  border-bottom: 1px solid rgb(49, 44, 45);
+  background-color: rgb(49, 44, 45);
+  color: rgb(235, 206, 152);
+}
+section.skillset ul.ul-nest-1,
+section.skillset ul.ul-nest-2,
+section.skillset ul.ul-nest-3 {
+  list-style: none;
+}
+section.skillset li.li-level-1 {
+  letter-spacing: 0.3rem;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  padding: 10px;
+  border-bottom: 1px dotted rgb(49, 44, 45);
+  display: block;
+}
+section.skillset li.li-level-1:last-of-type {
+  letter-spacing: 0.2rem;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  padding: 10px;
+  display: block;
+  border-bottom: 1px dotted rgba(0, 0, 0, 0);
+}
+section.skillset li.li-level-2 {
+  display: block;
+  font-size: 1.2rem;
+  letter-spacing: 0rem;
+  text-transform: none;
+  font-weight: 470;
+  padding: 10px 20px 10px 20px;
+  border-radius: 7px;
+}
+section.skillset li.li-level-3 {
+  display: block;
+  font-size: 1rem;
+  letter-spacing: 0rem;
+  text-transform: none;
+  font-weight: 470;
+  padding: 10px 40px 10px 40px;
+}
+section.skillset li.li-level-1.has-sub:hover {
+  background: rgb(210, 142, 83);
+  transition: all 500ms linear;
+}
+section.skillset li.li-level-2.has-sub:hover {
+  background: rgb(235, 206, 152);
+  transition: all 500ms linear;
+}
+section.skillset li.li-level-1.has-sub:not(.tap) ul.ul-nest-2,
+section.skillset li.li-level-2.has-sub:not(.tap) ul.ul-nest-3 {
+  display: none;
+}
+section.skillset li.li-level-1.has-sub:not(.tap) span.sub-btn::after,
+section.skillset li.li-level-2.has-sub:not(.tap) span.sub-btn::after {
+  content: "›";
+  float: right;
+  margin-right: 10px;
+  transform: rotate(90deg);
+}
+section.skillset li.li-level-1.has-sub.tap .sub-btn::after,
+section.skillset li.li-level-2.has-sub.tap .sub-btn::after {
+  content: "‹";
+  float: right;
+  margin-right: 10px;
+  transform: rotate(90deg);
+}
+
+/* THE CONTACT-ME FORM ----------------------------------------------------------------------*/
+div.contact-me {
+  margin-top: 30px;
+  margin-left: 550px;
+  margin-right: 550px;
+  margin-bottom: 30px;
+  background-color: rgba(49, 44, 45, 0.92);
+  border: 2px solid rgb(235, 206, 152);
+  border-radius: 10px;
+  padding: 2rem;
+}
+div.contact-me h1.contact-me {
+  font-family: "Cinzel Decorative", cursive;
+  text-align: center;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+  width: 100%;
+  outline: none;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  word-spacing: 0.5rem;
+}
+div.contact-me .feedback-input {
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 300;
+  line-height: 1.8rem;
+  border: 1px solid rgb(235, 206, 152);
+  padding: 15px;
+  margin-bottom: 15px;
+  width: 100%;
+  outline: none;
+  background-color: transparent;
+}
+div.contact-me .feedback-input::-moz-placeholder {
+  color: rgba(235, 206, 152, 0.3);
+}
+div.contact-me .feedback-input::placeholder {
+  color: rgba(235, 206, 152, 0.3);
+}
+div.contact-me .feedback-input:focus {
+  box-shadow: 0 0 8px #fff;
+}
+div.contact-me textarea {
+  height: 150px;
+  line-height: 150%;
+  resize: vertical;
+}
+div.contact-me [type=submit] {
+  font-family: "Cinzel Decorative", cursive;
+  font-weight: 600;
+  width: 100%;
+  background: rgba(210, 142, 83, 0.7);
+  color: white;
+  border: 1px solid rgb(235, 206, 152);
+  font-size: 1.7rem;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  cursor: pointer;
+  transition: all 500ms linear;
+}
+div.contact-me [type=submit]:hover {
+  background: rgb(210, 142, 83);
+  box-shadow: 0 0 8px #fff;
+}
+
+/* Styling the button that takes us back to the top of the page ----------------------------- */
+body.about-me div.back-to-top {
+  display: none;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+body.about-me div.back-to-top > a {
+  text-decoration: none;
+  display: block;
+  min-width: 30px;
+  min-height: 30px;
+  font-size: 5rem;
+  color: rgb(235, 206, 152);
+  text-align: right;
+}
+
+section.saved-background {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 100vw;
+  background-repeat: none;
+  background-image: url("../images/saved-background.png");
+  background-attachment: fixed;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+div.saved-items > p {
+  padding: 15px;
+  margin: 15px;
+  font-size: 1.5rem;
+  color: #000;
+}
+
+/*
+Import the "Dr Sugiyama" Google Font
+The usage of the font:
+    font-family: 'Dr Sugiyama', cursive;
+*/
+/*
+Import the "Noto Serif Japanese" Google Font.
+The usage of the font:
+    font-family: 'Noto Serif JP', serif;
+*/
+/*
+Import the "Cinzel Decorative" Google Font.
+The usage of the font:
+    font-family: 'Cinzel Decorative', cursive;
+*/
+/*
+Import the "Arimo" Google Font.
+The usage of the font:
+    font-family: 'Arimo', sans-serif;
+*/
+/*
+Import the "Pirata One" Google Font.
+The usage of the font:
+    font-family: "Pirata One", cursive;
+*/
+header.navigation {
+  border: solid 2px #555;
+  width: 100%;
+}
+header.navigation ul.nav-items {
+  list-style: none;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-image: linear-gradient(to right, rgb(65, 71, 89), rgb(213, 165, 154));
+}
+header.navigation ul.nav-items li.nav-item {
+  display: inline-block;
+  padding: 1.2rem 1.5rem;
+  font-size: 1.7rem;
+}
+header.navigation ul.nav-items li.nav-item > a:link,
+header.navigation ul.nav-items li.nav-item > a:visited {
+  text-decoration: none;
+  color: white;
+  font-family: "Cinzel Decorative", cursive;
+}
+header.navigation ul.nav-items li.nav-item > a:hover {
+  text-decoration: underline;
+  color: rgba(235, 206, 152, 0.92);
+}
+header.navigation ul.nav-items li.active {
+  text-decoration: underline;
+}
+
+span.jp-insert {
+  font-family: "Noto Serif JP", serif;
+}
+
+form#like-form {
+  display: inline-block;
+}
+form#like-form button {
+  display: inline-block;
+  background-color: rgba(63, 230, 41, 0.5);
+  text-align: center;
+  margin: -15px 5px 5px 5px;
+  padding: 7px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 16px;
+  border: 1px solid #999;
+  box-shadow: 2px 2px 5px #999;
+  cursor: pointer;
+}
+
+button:has(i.sfl) {
+  display: inline-block;
+  background-color: rgba(63, 230, 41, 0.5);
+  text-align: center;
+  font-family: "Arimo", sans-serif;
+  margin: -15px 5px 5px 5px;
+  padding: 7px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 16px;
+  border: 1px solid #999;
+  box-shadow: 2px 2px 5px #999;
+  outline: none;
+}
+button:has(i.sfl) > i.sfl {
+  cursor: pointer;
+}
+
+button:has(i.sfl.fa.fa-paper-plane-o.fa-lg) {
+  display: inline-block;
+  background-color: orange;
+  text-align: center;
+  margin: -15px 5px 5px 5px;
+  padding: 7px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 16px;
+  border: 1px solid #999;
+  box-shadow: 2px 2px 5px #999;
+}/*# sourceMappingURL=main.css.map */
